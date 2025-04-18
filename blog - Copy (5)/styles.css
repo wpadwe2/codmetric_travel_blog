@@ -1,0 +1,364 @@
+/* --- Font Pair Set A --- */
+article:nth-child(3n+1) h3 {
+  font-family: 'Lobster', cursive;
+}
+article:nth-child(3n+1) p {
+  font-family: 'Lobster', cursive;
+}
+
+/* --- Font Pair Set B --- */
+article:nth-child(3n+2) h3,
+article:nth-child(3n+2) p {
+  font-family: 'Lobster', cursive;
+}
+
+/* --- Font Pair Set C --- */
+article:nth-child(3n) h3,
+article:nth-child(3n) p {
+  font-family: 'Lobster', cursive;
+}
+
+
+/* Background Video */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Transparent Containers on the sides */
+.side-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2vw;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.left-side {
+  left: 0;
+}
+
+.right-side {
+  right: 0;
+}
+
+/* Main Content Styling */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Blog Section Styling */
+#blog {
+  padding: 20px;
+}
+
+#blog h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.blog-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  justify-content: center;
+  gap: 20px;
+}
+
+article {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6); /* ← semi-transparent dark */
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: navy; /* optional: make sure text is readable */
+}
+
+article img {
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+article h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+article p {
+  color: #333;
+  font-size: 1rem;
+}
+
+article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Backgrounds for Articles */
+article:nth-child(1) {
+  background-image: url('assets/images/victoria-falls-bg.jpg');
+}
+article:nth-child(2) {
+  background-image: url('assets/images/paris-bg.jpg');
+}
+article:nth-child(3) {
+  background-image: url('assets/images/alps-bg.jpg');
+}
+article:nth-child(4) {
+  background-image: url('assets/images/djurdura-bg.jpg');
+}
+article:nth-child(5) {
+  background-image: url('assets/images/munich-bg.jpg');
+}
+article:nth-child(6) {
+  background-image: url('assets/images/london-bg.jpg');
+}
+article:nth-child(7) {
+  background-image: url('assets/images/djibouti-island-bg.jpg');
+}
+article:nth-child(8) {
+  background-image: url('assets/images/delhi-bg.jpg');
+}
+article:nth-child(9) {
+  background-image: url('assets/images/gaborone-bg.jpg');
+}
+article:nth-child(10) {
+  background-image: url('assets/images/dubai-bg.jpg');
+}
+
+article:nth-child(1),
+article:nth-child(2),
+article:nth-child(3),
+article:nth-child(4),
+article:nth-child(5),
+article:nth-child(6),
+article:nth-child(7),
+article:nth-child(8),
+article:nth-child(9),
+article:nth-child(10) {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Photo Gallery Section */
+#photo-gallery {
+  padding: 20px;
+}
+
+#photo-gallery h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two images side by side */
+  gap: 30px;
+  justify-items: center;
+}
+
+.slide-container {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background-color: #fff; /* <--- ADD THIS LINE */
+}
+
+.gallery-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 5;
+  transition: opacity 2s ease-in-out;
+  position: absolute; /* Stack images */
+}
+
+.gallery-slide.active {
+  opacity: 1;
+}
+
+/* Contact Section */
+#contact-form {
+  padding: 20px;
+}
+
+#contact-form h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+#contact-form form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact-form label {
+  font-size: 1.1rem;
+  color: white;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+#contact-form button {
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE STYLING */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  #blog h2,
+  #photo-gallery h2,
+  #contact-form h2 {
+    font-size: 2rem;
+  }
+
+  .slide-container {
+    width: 90%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .blog-articles {
+    grid-template-columns: 1fr;
+  }
+
+  article h3 {
+    font-size: 1.2rem;
+  }
+
+  article p {
+    font-size: 0.95rem;
+  }
+
+  article img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slide-container {
+    height: 300px;
+  }
+
+  #contact-form form {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .slide-container {
+    height: 250px;
+  }
+
+  article {
+    padding: 15px;
+  }
+
+  article h3 {
+    font-size: 1.1rem;
+  }
+
+  article p {
+    font-size: 0.9rem;
+  }
+}
